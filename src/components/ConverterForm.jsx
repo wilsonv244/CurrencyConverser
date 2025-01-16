@@ -56,7 +56,7 @@ const ConverterForm = () => {
   return (
     <form className="converter-form" onSubmit={handleFormSubmit}>
       <div className="form-group">
-        <label className="form-label">Enter Amount</label>
+        <label className="form-label">Ingrese Monto</label>
         <input
           type="number"
           className="form-input"
@@ -68,7 +68,7 @@ const ConverterForm = () => {
 
       <div className="form-group form-currency-group">
         <div className="form-section">
-          <label className="form-label">From</label>
+          <label className="form-label">De</label>
           <CurrencySelect
             selectedCurrency={fromCurrency}
             handleCurrency={(e) => setFromCurrency(e.target.value)}
@@ -89,7 +89,7 @@ const ConverterForm = () => {
         </div>
 
         <div className="form-section">
-          <label className="form-label">To</label>
+          <label className="form-label">A</label>
           <CurrencySelect
             selectedCurrency={toCurrency}
             handleCurrency={(e) => setToCurrency(e.target.value)}
@@ -101,7 +101,7 @@ const ConverterForm = () => {
         type="submit"
         className={`${isLoading ? "loading" : ""} submit-button`}
       >
-        Get Exchange Rate
+        Calcular Cambio de Moneda
       </button>
       <p className="exchange-rate-result">
         {/* Display the conversion result */}
